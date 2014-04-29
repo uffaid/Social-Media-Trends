@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>Social Media Trends FOV</title>
+<script >
+function check_radiobutton_value()
+{
+
+var radio_button_value=document.getElementById("stream").checked;
+
+if(radio_button_value==true)
+{
+document.getElementById("sign_in").action="stream_option.php";
+}
+else
+{
+document.getElementById("sign_in").action="rest_option.php";
+}
+}
+</script>
+</head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico">
+
+    <title>SignIn here for SOCIAL MEDIA TRENDS</title>
+
+    
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
+  <style type="text/css"></style></head>
+
+<body>
+ <h2 class="form-signin-heading" align="center"><i>Search</i></h2>
+     
+    <form method="post"  class="form-signin" name="sign_in" id="sign_in" action="POST" onSubmit="check_radiobutton_value()" class="login">
+   <i> Enter The SCREEN NAME of the twitter user to retrieve his/her tweets </i> <br>
+     <p>
+    <b> People: </b>
+	 <input  type="text" name="people" id="people" class="form-control" value="">
+    </p>
+	
+	<p>
+	<i>Enter The KeyWord to retrieve the tweets relevant to the specified keyword<i> <br>
+
+    <b>KeyWord: </b>
+	 <input type="text" name="topic" id="topic" class="form-control" value="">
+    </p>
+	<p>
+	<input type="radio" name="select_api" id="rest" value="rest_api"> <b>Rest API </b> &nbsp&nbsp&nbsp&nbsp
+    <input type="radio" name="select_api"  id="stream" value="streaming_api"> <b>Streaming API </b> </p>
+	<p class="login-submit">
+      <button type="submit" class="btn btn-lg btn-primary btn-block">Click</button>
+    </p>
